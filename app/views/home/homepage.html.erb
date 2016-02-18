@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+      <h1>Welcome to our game site.</h1>
+      <h2>Hi <%= @player %>!</h2>
+      <h5>Created by Shane and Nat</h5>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-center col-sm-offset-3">
+        <p>Please enter your name: </p>
+        <form action="/home" method="get">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Player Name: </span>
+            <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1" name="player">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Go play!</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

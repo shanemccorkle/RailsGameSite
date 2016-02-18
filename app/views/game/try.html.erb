@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Hi/Lo!</h1>
+  </div>
+  <!-- secret number is <%= @secret_number %> -->
+  <div class="row">
+    <div class="col-sm-4 text-center col-sm-offset-4">
+      <form action = "/game" method = "get">
+        <input type="number" name="guess" class="input-lg" min="1" max="100" required/>
+        <input type="submit" class="btn-lg" value="Submit Guess"/>
+      </form>
+    </div>
+  </div>
+
+  <p>Your guess: <span><%= @guess %></span></p>
+  <p>
+    Your previous guesses: <%= cookies[:all_guess].chop.chop %>
+  </p>
+  <p id="notice"><%= flash.now[:notice] %></p>
+  <p id="alert"><%= flash.now[:alert] %></p>
+
+</div>
